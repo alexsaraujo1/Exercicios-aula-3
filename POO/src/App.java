@@ -1,7 +1,6 @@
-
 public class App {
     public static void main(String[] args) throws Exception {
-        Cachorro rex = new Cachorro("Dhomi", "Viralata", "M", 40f, weight:25f , 2018);
+        Cachorro rex = new Cachorro("Dhomi", "Viralata", "M", 40f , 2018);
         
         rex.description();
        
@@ -19,6 +18,7 @@ class Cachorro {
     private int age;
     private String name;
     private String sex;
+
     private float weight;
     private float thirstMeter;
     private String hasVaccine;
@@ -29,16 +29,14 @@ class Cachorro {
         this.size = 40f;
         this.age = 2;
         this.sex = "M";
-        this.weight = 25f;
     }
 
-    public Cachorro(String name, String race, String sex, float size, float weight, int birth){
+    public Cachorro(String name, String race, String sex, float size, int birth){
         this.name = name;
         this.race = race;
         this.sex = sex;
         this.size = size;
         this.age = 2023 - birth;
-        this.weight = weight;
     }
 
     public void description(){
@@ -47,11 +45,11 @@ class Cachorro {
         ", ele é um cachorro da raça " + this.race +
         " tem de porte " + this.size + 
         ",é do sexo " + this.sex +
-        " e tem " + this.age + " anos";
-        "tem de peso" + this.weight + "kg");
+        " e tem " + this.age + " anos");
     }
 
 }
+
 
 
 
