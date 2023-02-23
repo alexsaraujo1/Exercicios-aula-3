@@ -1,13 +1,13 @@
+
 public class App {
     public static void main(String[] args) throws Exception {
-        Cachorro rex = new Cachorro("Rex", "Pastor Alemão", "Preto", 65f , 2018);
-        Cachorro lassie = new Cachorro("Lassie");
-        Cachorro lion = new Cachorro("Lion");
-        Cachorro frederico = new Cachorro("Frederico", "Poodle", "branco", 24f , 2006);
+        Cachorro rex = new Cachorro("Dhomi", "Viralata", "M", 40f, weight:25f , 2018);
+        
         rex.description();
-        lassie.description();
-        lion.description();
-        frederico.description();
+       
+     
+       
+     
         System.out.println("Execução Terminada");
     }
 }
@@ -16,40 +16,44 @@ class Cachorro {
     
     private String race;
     private float size;
-    private String color;
     private int age;
     private String name;
-    private char sex;
+    private String sex;
     private float weight;
     private float thirstMeter;
-    private boolean hasVaccine;
+    private String hasVaccine;
 
     public Cachorro(String name){
         this.name = name;
         this.race = "Vira-lata";
-        this.color = "Caramelo";
         this.size = 40f;
         this.age = 2;
+        this.sex = "M";
+        this.weight = 25f;
     }
 
-    public Cachorro(String name, String race, String color, float size, int birth){
+    public Cachorro(String name, String race, String sex, float size, float weight, int birth){
         this.name = name;
         this.race = race;
-        this.color = color;
+        this.sex = sex;
         this.size = size;
         this.age = 2023 - birth;
+        this.weight = weight;
     }
 
     public void description(){
         System.out.println(
         "Esse é " + this.name +
         ", ele é um cachorro da raça " + this.race +
-        " de porte " + this.size + 
-        " da cor " + this.color +
-        " e tem " + this.age + " anos");
+        " tem de porte " + this.size + 
+        ",é do sexo " + this.sex +
+        " e tem " + this.age + " anos";
+        "tem de peso" + this.weight + "kg");
     }
 
 }
+
+
 
 class Glass{
     private float volume;
